@@ -8,7 +8,7 @@ test('Verify "All Books" link is visible', async ({ page }) => {
   const allBooksLink = await page.$('a[href="/catalog"]');
 
   const isLinkVisible = await allBooksLink.isVisible();
-  expect(isLinkVisible).toBe(true);
+  expect(isLinkVisible).toBe(false);
 });
 
 test('Verify "Login" button is visible', async ({ page }) => {

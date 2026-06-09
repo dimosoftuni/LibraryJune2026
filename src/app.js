@@ -28,7 +28,7 @@ page('/details/:id', decorateContext, detailsPage);
 page('/edit/:id', decorateContext, editPage);
 page('/profile', decorateContext, profilePage);
 
-
+// start application in catalog page
 page.start();
 function decorateContext(ctx, next) {
     ctx.render = (content) => render(content, main);
