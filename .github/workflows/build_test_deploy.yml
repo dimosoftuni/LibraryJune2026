@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build_test:
@@ -31,6 +32,9 @@ jobs:
 
     - name: Install Playwright Browsers
       run: npx playwright install
+
+    - name: Manualy change the config file
+      run: echo "export const settings = { host:'http://localhost:3030' };" > src/config.js
 
     - name: Run tests
       run: npm test
