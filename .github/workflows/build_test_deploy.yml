@@ -16,10 +16,10 @@ jobs:
     - name: Checkout the repository
       uses: actions/checkout@v4
 
-    - name: Use Node.js 24
+    - name: Use Node.js 22
       uses: actions/setup-node@v6
       with:
-        node-version: 24
+        node-version: 22
 
     - name: Install npm dependencies
       run: npm install
@@ -34,7 +34,7 @@ jobs:
       run: npm run start-fe &
 
     - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      run: npx playwright install
     
     - name: Run tests
       run: npm test
