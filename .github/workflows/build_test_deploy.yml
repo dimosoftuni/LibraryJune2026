@@ -34,7 +34,7 @@ jobs:
       run: npm run start-fe &
 
     - name: Install Playwright Browsers
-      run: npx playwright install
-
+      run: npx playwright install --with-deps
+    
     - name: Run tests
       run: npm test
